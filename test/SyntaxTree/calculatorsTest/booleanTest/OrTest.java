@@ -1,5 +1,6 @@
 package SyntaxTree.calculatorsTest.booleanTest;
 
+import SyntaxTree.dataTypes.Boolean;
 import SyntaxTree.nodes.Constant;
 import SyntaxTree.nodes.Node;
 import SyntaxTree.operations.BinaryOperation;
@@ -11,7 +12,7 @@ public class OrTest {
 
     @Test
     public void orTest() {
-        Node node = new BinaryOperation(new Constant(new SyntaxTree.dataTypes.Boolean(true)), new Constant(new SyntaxTree.dataTypes.Boolean(false)), BinaryOperator.OR);
+        Node node = new BinaryOperation(new Constant(new Boolean(true)), new Constant(new SyntaxTree.dataTypes.Boolean(false)), BinaryOperator.OR);
         Assert.assertEquals(true, node.evaluate().getValue());
     }
 }
