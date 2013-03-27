@@ -1,6 +1,8 @@
 package SyntaxTree.nodes;
 
+import SyntaxTree.generic.Type;
+
 public abstract class Node {
 
-    public abstract Double evaluate();
+    public abstract Type evaluate();
 }
