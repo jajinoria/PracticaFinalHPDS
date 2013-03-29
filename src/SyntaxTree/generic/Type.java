@@ -8,6 +8,10 @@ public class Type<T> {
         this.value = value;
     }
 
+    public Type() {
+        this.value = (T) new Type<T>();
+    }
+
     public T getValue() {
         return value;
     }

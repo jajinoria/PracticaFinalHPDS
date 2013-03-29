@@ -1,7 +1,5 @@
-package SyntaxTree.calculatorsTest.booleanMockitoTest;
+package SyntaxTree.calculatorsTest.booleanWhitMockitoTest;
 
-import SyntaxTree.dataTypes.Integer;
-import SyntaxTree.dataTypes.String;
 import SyntaxTree.nodes.Constant;
 import SyntaxTree.nodes.Node;
 import SyntaxTree.operations.BinaryOperation;
@@ -9,6 +7,7 @@ import SyntaxTree.operators.BinaryOperator;
 import junit.framework.Assert;
 import org.junit.Test;
 import SyntaxTree.dataTypes.Boolean;
+import SyntaxTree.operators.Operator;
 import static org.mockito.Mockito.*;
 
 public class AndTest {
@@ -22,7 +21,12 @@ public class AndTest {
         when(mockConstantA.evaluate()).thenReturn(new Boolean(false));
         Constant mockConstantB = mock(Constant.class);
         when(mockConstantB.evaluate()).thenReturn(new Boolean(false));
-        Node node = new BinaryOperation( mockConstantA, mockConstantB, BinaryOperator.AND);
+        BinaryOperator mockBinaryOperator = mock(BinaryOperator.class);
+        when (mockBinaryOperator.getName()).thenReturn("and");
+        when (mockBinaryOperator.getSymbol()).thenReturn("&&");
+        String name = mockBinaryOperator.getName();
+        String symbol = mockBinaryOperator.getSymbol();
+        Node node = new BinaryOperation( mockConstantA, mockConstantB, new Operator(symbol,name));
         Assert.assertEquals(false, node.evaluate().getValue());
     }    
   

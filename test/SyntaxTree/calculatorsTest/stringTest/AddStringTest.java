@@ -1,14 +1,14 @@
 package SyntaxTree.calculatorsTest.stringTest;
 
-import junit.framework.Assert;
+import SyntaxTree.dataTypes.Double;
+import SyntaxTree.dataTypes.Integer;
+import SyntaxTree.dataTypes.String;
+import SyntaxTree.nodes.Constant;
 import SyntaxTree.nodes.Node;
 import SyntaxTree.operations.BinaryOperation;
 import SyntaxTree.operators.BinaryOperator;
-import SyntaxTree.nodes.Constant;
-import SyntaxTree.dataTypes.String;
+import junit.framework.Assert;
 import org.junit.Test;
-import SyntaxTree.dataTypes.Integer;
-import SyntaxTree.dataTypes.Double;
 
 public class AddStringTest {
 
@@ -20,23 +20,23 @@ public class AddStringTest {
         Node node = new BinaryOperation(new Constant(new String("Jose ")), new Constant(new String("Alberto")), BinaryOperator.ADD);
         Assert.assertEquals("Jose Alberto", node.evaluate().getValue());
     }
-    
-     public void stringIntegerTest() {
+
+    public void stringIntegerTest() {
         Node node = new BinaryOperation(new Constant(new String("Jose ")), new Constant(new Integer(1)), BinaryOperator.ADD);
         Assert.assertEquals("Jose 1", node.evaluate().getValue());
     }
 
-      public void stringDoubleTest() {
+    public void stringDoubleTest() {
         Node node = new BinaryOperation(new Constant(new String("Jose ")), new Constant(new Double(1.0)), BinaryOperator.ADD);
         Assert.assertEquals("Jose1.0", node.evaluate().getValue());
     }
-      
-       public void doubleStringTest() {
+
+    public void doubleStringTest() {
         Node node = new BinaryOperation(new Constant(new Double(1.0)), new Constant(new String(" Jose")), BinaryOperator.ADD);
         Assert.assertEquals("1.0 Jose", node.evaluate().getValue());
     }
-       
-        public void integerStringTest() {
+
+    public void integerStringTest() {
         Node node = new BinaryOperation(new Constant(new Integer(1)), new Constant(new String(" Jose")), BinaryOperator.ADD);
         Assert.assertEquals("1 Jose", node.evaluate().getValue());
     }

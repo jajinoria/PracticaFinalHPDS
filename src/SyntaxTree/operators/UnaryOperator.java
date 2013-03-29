@@ -1,5 +1,7 @@
 package SyntaxTree.operators;
 
+import com.google.inject.Inject;
+
 public class UnaryOperator extends Operator {
 
     public static final UnaryOperator NOT = new UnaryOperator("|", "not");
@@ -7,6 +9,7 @@ public class UnaryOperator extends Operator {
     public static final UnaryOperator COS = new UnaryOperator("cos", "cos");
     public static final UnaryOperator TAN = new UnaryOperator("tan", "tan");
 
+    @Inject
     private UnaryOperator(String symbol, String name) {
         super(symbol, name);
     }
