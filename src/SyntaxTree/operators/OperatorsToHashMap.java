@@ -52,7 +52,7 @@ public class OperatorsToHashMap {
         }
     }
 
-    public Type getOperationResult(Operator operator, Type[] types) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public Type getOperationResult( Type[] types,Operator operator) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
         String signature = getSignature(operator, types);
         return (Type) methodsIntoHashMap.get(signature).invoke(null, (Object[]) types);
     }
