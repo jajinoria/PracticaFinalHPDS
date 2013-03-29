@@ -13,14 +13,16 @@ public class DivTest {
 
     public DivTest() {
     }
-     @Test
+
+    @Test
     public void integerIntegerAddTest() {
-        Node node = new BinaryOperation(new Constant(new Integer(5)),new Constant(new Integer(1)), BinaryOperator.DIVISION);
+        Node node = new BinaryOperation(new Constant(new Integer(5)), new Constant(new Integer(1)), BinaryOperator.DIVISION);
         Assert.assertEquals(5, node.evaluate().getValue());
     }
+
     @Test
     public void integerDoubleAddTest() {
-        Node node = new BinaryOperation(new Constant(new Integer(6)),new Constant(new Double(3.0)), BinaryOperator.DIVISION);
+        Node node = new BinaryOperation(new Constant(new Integer(6)), new Constant(new Double(3.0)), BinaryOperator.DIVISION);
         Assert.assertEquals(2.0, node.evaluate().getValue());
     }
 
@@ -32,11 +34,7 @@ public class DivTest {
 
     @Test
     public void doubleIntegerAddTest() {
-        Node node = new BinaryOperation(new Constant(new Double(5.0)),new Constant(new Integer(5)), BinaryOperator.DIVISION);
+        Node node = new BinaryOperation(new Constant(new Double(5.0)), new Constant(new Integer(5)), BinaryOperator.DIVISION);
         Assert.assertEquals(1.0, node.evaluate().getValue());
     }
-
-  
-
-   
 }

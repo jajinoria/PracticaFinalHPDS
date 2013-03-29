@@ -1,4 +1,3 @@
-
 package SyntaxTree.calculatorsTest.numberTest;
 
 import SyntaxTree.nodes.Constant;
@@ -8,12 +7,11 @@ import SyntaxTree.operators.UnaryOperator;
 import junit.framework.Assert;
 import org.junit.Test;
 
-
 public class TanTest {
-    
+
     public TanTest() {
     }
-    
+
     @Test
     public void tanTest() {
         Node node = new UnaryOperation(new Constant(new SyntaxTree.dataTypes.Double(30.0)), UnaryOperator.TAN);

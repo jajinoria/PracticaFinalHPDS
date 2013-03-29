@@ -13,14 +13,16 @@ public class SubTest {
 
     public SubTest() {
     }
-     @Test
+
+    @Test
     public void integerIntegerSubTest() {
-        Node node = new BinaryOperation(new Constant(new Integer(5)),new Constant(new Integer(10)), BinaryOperator.SUBSTRACT);
+        Node node = new BinaryOperation(new Constant(new Integer(5)), new Constant(new Integer(10)), BinaryOperator.SUBSTRACT);
         Assert.assertEquals(-5, node.evaluate().getValue());
     }
+
     @Test
     public void integerDoubleSubTest() {
-        Node node = new BinaryOperation(new Constant(new Integer(6)),new Constant(new Double(4.0)), BinaryOperator.SUBSTRACT);
+        Node node = new BinaryOperation(new Constant(new Integer(6)), new Constant(new Double(4.0)), BinaryOperator.SUBSTRACT);
         Assert.assertEquals(2.0, node.evaluate().getValue());
     }
 
@@ -32,11 +34,7 @@ public class SubTest {
 
     @Test
     public void doubleIntegerAddSub() {
-        Node node = new BinaryOperation(new Constant(new Double(5.0)),new Constant(new Integer(4)), BinaryOperator.SUBSTRACT);
+        Node node = new BinaryOperation(new Constant(new Double(5.0)), new Constant(new Integer(4)), BinaryOperator.SUBSTRACT);
         Assert.assertEquals(1.0, node.evaluate().getValue());
     }
-
-  
-
-   
 }

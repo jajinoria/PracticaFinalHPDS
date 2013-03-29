@@ -13,14 +13,16 @@ public class MulTest {
 
     public MulTest() {
     }
-     @Test
+
+    @Test
     public void integerIntegerMulTest() {
-        Node node = new BinaryOperation(new Constant(new Integer(5)),new Constant(new Integer(1)), BinaryOperator.MULTIPLY);
+        Node node = new BinaryOperation(new Constant(new Integer(5)), new Constant(new Integer(1)), BinaryOperator.MULTIPLY);
         Assert.assertEquals(5, node.evaluate().getValue());
     }
+
     @Test
     public void integerDoubleMulTest() {
-        Node node = new BinaryOperation(new Constant(new Integer(6)),new Constant(new Double(3.0)), BinaryOperator.MULTIPLY);
+        Node node = new BinaryOperation(new Constant(new Integer(6)), new Constant(new Double(3.0)), BinaryOperator.MULTIPLY);
         Assert.assertEquals(18.0, node.evaluate().getValue());
     }
 
@@ -32,11 +34,7 @@ public class MulTest {
 
     @Test
     public void doubleIntegerMulTest() {
-        Node node = new BinaryOperation(new Constant(new Double(5.0)),new Constant(new Integer(5)), BinaryOperator.MULTIPLY);
+        Node node = new BinaryOperation(new Constant(new Double(5.0)), new Constant(new Integer(5)), BinaryOperator.MULTIPLY);
         Assert.assertEquals(25.0, node.evaluate().getValue());
     }
-
-  
-
-   
 }

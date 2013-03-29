@@ -1,5 +1,6 @@
 package SyntaxTree.operations;
 
+import SyntaxTree.nodes.Operation;
 import SyntaxTree.generic.Type;
 import SyntaxTree.nodes.Node;
 import SyntaxTree.operators.Operator;

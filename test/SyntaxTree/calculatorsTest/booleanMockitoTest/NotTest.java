@@ -1,4 +1,4 @@
-package SyntaxTree.calculatorsTest.booleanTest;
+package SyntaxTree.calculatorsTest.booleanMockitoTest;
 
 import SyntaxTree.dataTypes.Boolean;
 import SyntaxTree.nodes.Constant;
@@ -7,7 +7,7 @@ import SyntaxTree.operations.UnaryOperation;
 import SyntaxTree.operators.UnaryOperator;
 import junit.framework.Assert;
 import org.junit.Test;
-
+import static org.mockito.Mockito.*;
 public class NotTest {
 
     public NotTest() {
@@ -15,7 +15,9 @@ public class NotTest {
 
     @Test
     public void doubleDoubleAddTest() {
-        Node notNode = new UnaryOperation(new Constant(new Boolean(true)), UnaryOperator.NOT);
+        Constant mockConstantA = mock(Constant.class);
+        when(mockConstantA.evaluate()).thenReturn(new Boolean(true));
+        Node notNode = new UnaryOperation(mockConstantA, UnaryOperator.NOT);
         Assert.assertEquals(false, notNode.evaluate().getValue());
     }
 

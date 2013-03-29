@@ -1,4 +1,4 @@
-package SyntaxTree.operations;
+package SyntaxTree.nodes;
 
 import SyntaxTree.nodes.Node;
 
