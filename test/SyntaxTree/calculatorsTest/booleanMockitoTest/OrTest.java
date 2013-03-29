@@ -16,7 +16,7 @@ public class OrTest {
         when(mockConstantA.evaluate()).thenReturn(new Boolean(false));
         Constant mockConstantB = mock(Constant.class);
         when(mockConstantB.evaluate()).thenReturn(new Boolean(false));
-        Node node = new BinaryOperation( mockConstantA, mockConstantB, BinaryOperator.OR);
+        Node node = new BinaryOperation( mockConstantA, mockConstantB, BinaryOperator.getOR());
         Assert.assertEquals(false, node.evaluate().getValue());
     }
 }

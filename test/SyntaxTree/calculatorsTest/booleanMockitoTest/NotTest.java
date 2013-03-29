@@ -17,7 +17,7 @@ public class NotTest {
     public void doubleDoubleAddTest() {
         Constant mockConstantA = mock(Constant.class);
         when(mockConstantA.evaluate()).thenReturn(new Boolean(true));
-        Node notNode = new UnaryOperation(mockConstantA, UnaryOperator.NOT);
+        Node notNode = new UnaryOperation(mockConstantA, UnaryOperator.getNOT());
         Assert.assertEquals(false, notNode.evaluate().getValue());
     }
 
