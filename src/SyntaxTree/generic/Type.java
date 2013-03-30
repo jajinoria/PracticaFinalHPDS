@@ -9,10 +9,13 @@ public class Type<T> {
     }
 
     public Type() {
-        this.value = (T) new Type<T>();
     }
 
     public T getValue() {
         return value;
+    }
+
+    public void setValue(T value) {
+        this.value = value;
     }
 }

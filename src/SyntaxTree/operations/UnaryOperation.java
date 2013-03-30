@@ -1,8 +1,6 @@
 package SyntaxTree.operations;
 
-import SyntaxTree.dataTypes.Boolean;
 import SyntaxTree.generic.Type;
-import SyntaxTree.nodes.Constant;
 import SyntaxTree.nodes.Node;
 import SyntaxTree.nodes.Operation;
 import SyntaxTree.operators.Operator;
@@ -14,19 +12,16 @@ import java.util.logging.Logger;
 
 public class UnaryOperation extends Operation {
 
-    private final Node child;
-    private final Operator operator;
+    private Node child;
+    private Operator operator;
     private OperatorsToHashMap operatorsIntoHashMap = new OperatorsToHashMap();
 
-    public UnaryOperation(Node node, Operator operator) {
-        this.child = node;
-        this.operator = operator;
+    public void setChild(Node child) {
+        this.child = child;
     }
 
-    @Inject
-    public UnaryOperation() {
-        this.child = new Constant(new Boolean(true));
-        this.operator = new Operator("!", "not");
+    public void setOperator(Operator operator) {
+        this.operator = operator;
     }
 
     public Operator getOperator() {
@@ -36,8 +31,13 @@ public class UnaryOperation extends Operation {
     public Node getChild() {
         return child;
     }
-    
-  
+
+    @Inject
+    public UnaryOperation(Node node, Operator operator) {
+        this.child = node;
+        this.operator = operator;
+    }
+
     @Override
     public Type evaluate() {
         try {

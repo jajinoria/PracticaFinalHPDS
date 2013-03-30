@@ -17,5 +17,7 @@ public class Constant extends Node {
         return value;
     }
 
-  
+    public void setValue(Type value) {
+        this.value = value;
+    }
 }
