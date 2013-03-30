@@ -1,4 +1,4 @@
-package SyntaxTree.testUsingGuice.calculatorsUsingGuiceTest;
+package SyntaxTree.testUsingGuice.calculatorsUsingGuiceTest.booleanTest;
 
 import SyntaxTree.dataTypes.Boolean;
 import SyntaxTree.modules.OperationModules.UnaryOperationModule;
