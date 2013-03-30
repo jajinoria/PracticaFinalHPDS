@@ -36,6 +36,6 @@ public class booleanAndTest {
         leftChild.setValue(typeOfLeft);
         bin.setLeftChild(leftChild);
         bin.setRightChild(rightChild);
-        bin.setOperator(BinaryOperator.getAND());
+        bin.setOperator(BinaryOperator.getAND()); 
     }
 }

@@ -31,6 +31,6 @@ public class booleanNotTest {
         booleanValue.setValue(true);
         child.setValue(booleanValue);
         unaryOperation.setChild(child);
-        unaryOperation.setOperator(UnaryOperator.getNOT());
+        unaryOperation.setOperator(UnaryOperator.getNOT()); 
     }
 }
