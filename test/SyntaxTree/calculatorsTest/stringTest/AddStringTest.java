@@ -17,27 +17,27 @@ public class AddStringTest {
 
     @Test
     public void stringStringTest() {
-        Node node = new BinaryOperation(new Constant(new String("Jose ")), new Constant(new String("Alberto")), BinaryOperator.ADD);
+        Node node = new BinaryOperation(new Constant(new String("Jose ")), new Constant(new String("Alberto")), BinaryOperator.getADD());
         Assert.assertEquals("Jose Alberto", node.evaluate().getValue());
     }
 
     public void stringIntegerTest() {
-        Node node = new BinaryOperation(new Constant(new String("Jose ")), new Constant(new Integer(1)), BinaryOperator.ADD);
+        Node node = new BinaryOperation(new Constant(new String("Jose ")), new Constant(new Integer(1)), BinaryOperator.getADD());
         Assert.assertEquals("Jose 1", node.evaluate().getValue());
     }
 
     public void stringDoubleTest() {
-        Node node = new BinaryOperation(new Constant(new String("Jose ")), new Constant(new Double(1.0)), BinaryOperator.ADD);
+        Node node = new BinaryOperation(new Constant(new String("Jose ")), new Constant(new Double(1.0)), BinaryOperator.getADD());
         Assert.assertEquals("Jose1.0", node.evaluate().getValue());
     }
 
     public void doubleStringTest() {
-        Node node = new BinaryOperation(new Constant(new Double(1.0)), new Constant(new String(" Jose")), BinaryOperator.ADD);
+        Node node = new BinaryOperation(new Constant(new Double(1.0)), new Constant(new String(" Jose")), BinaryOperator.getADD());
         Assert.assertEquals("1.0 Jose", node.evaluate().getValue());
     }
 
     public void integerStringTest() {
-        Node node = new BinaryOperation(new Constant(new Integer(1)), new Constant(new String(" Jose")), BinaryOperator.ADD);
+        Node node = new BinaryOperation(new Constant(new Integer(1)), new Constant(new String(" Jose")), BinaryOperator.getADD());
         Assert.assertEquals("1 Jose", node.evaluate().getValue());
     }
 }

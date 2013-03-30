@@ -14,7 +14,7 @@ public class TanTest {
 
     @Test
     public void tanTest() {
-        Node node = new UnaryOperation(new Constant(new SyntaxTree.dataTypes.Double(30.0)), UnaryOperator.TAN);
+        Node node = new UnaryOperation(new Constant(new SyntaxTree.dataTypes.Double(30.0)), UnaryOperator.getTAN());
         Assert.assertEquals(0.577, (double) node.evaluate().getValue(), 0.001);
     }
 }

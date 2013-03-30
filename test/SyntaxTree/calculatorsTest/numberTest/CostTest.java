@@ -15,7 +15,7 @@ public class CostTest {
 
     @Test
     public void cosTest() {
-        Node node = new UnaryOperation(new Constant(new Double(30.0)), UnaryOperator.COS);
+        Node node = new UnaryOperation(new Constant(new Double(30.0)), UnaryOperator.getCOS());
         Assert.assertEquals(0.866, (double) node.evaluate().getValue(), 0.001);
     }
 }

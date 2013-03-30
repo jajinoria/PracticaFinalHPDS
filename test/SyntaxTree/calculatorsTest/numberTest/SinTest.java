@@ -15,7 +15,7 @@ public class SinTest {
 
     @Test
     public void sinTest() {
-        Node node = new UnaryOperation(new Constant(new Double(30.0)), UnaryOperator.SIN);
+        Node node = new UnaryOperation(new Constant(new Double(30.0)), UnaryOperator.getSIN());
         Assert.assertEquals(0.5, (double) node.evaluate().getValue(), 0.001);
     }
 }

@@ -1,15 +1,15 @@
 package SyntaxTree.testUsingGuice.calculatorsUsingGuiceTest;
 
-import SyntaxTree.modules.BinaryOperationModule;
-import SyntaxTree.modules.UnaryOperationModule;
-import SyntaxTree.nodes.Node;
-import SyntaxTree.operations.BinaryOperation;
+import SyntaxTree.dataTypes.Boolean;
+import SyntaxTree.modules.OperationModules.UnaryOperationModule;
+import SyntaxTree.nodes.Constant;
 import SyntaxTree.operations.UnaryOperation;
+import SyntaxTree.operators.BinaryOperator;
+import SyntaxTree.operators.UnaryOperator;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+import org.junit.Assert;
 import org.junit.Test;
-import junit.framework.Assert;
-import static org.mockito.Mockito.*;
 
 public class booleanNotTest {
 
@@ -18,10 +18,19 @@ public class booleanNotTest {
 
     @Test
     public void booleanNotTest() {
-        Injector injector = Guice.createInjector(new UnaryOperationModule());         
-        Node node = mock(Node.class);
-        node = injector.getInstance(UnaryOperation.class);
-        Assert.assertEquals(false, node.evaluate().getValue());
+        Injector injectorUnaryOperation = Guice.createInjector(new UnaryOperationModule());
+        UnaryOperation unaryOperation = injectorUnaryOperation.getInstance(UnaryOperation.class);
+        Constant child = injectorUnaryOperation.getInstance(Constant.class);
+        Boolean booleanValue = injectorUnaryOperation.getInstance(Boolean.class);
+        putInitializationvalues(booleanValue, child, unaryOperation);
+        Assert.assertEquals(false, unaryOperation.evaluate().getValue());
 
+    }
+
+    private void putInitializationvalues(Boolean booleanValue, Constant child, UnaryOperation unaryOperation) {
+        booleanValue.setValue(true);
+        child.setValue(booleanValue);
+        unaryOperation.setChild(child);
+        unaryOperation.setOperator(UnaryOperator.getNOT());
     }
 }

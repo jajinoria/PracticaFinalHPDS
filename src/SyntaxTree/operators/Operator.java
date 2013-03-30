@@ -2,13 +2,15 @@ package SyntaxTree.operators;
 
 public class Operator {
 
-    private final String symbol;
-    private final String name;
+    private String symbol = null;
+    private String name = null;
 
     public Operator(String symbol, String name) {
         this.symbol = symbol;
         this.name = name;
+    }
 
+    public Operator() {
     }
 
     public String getSymbol() {
