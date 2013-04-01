@@ -4,7 +4,6 @@ import SyntaxTree.dataTypes.Boolean;
 import SyntaxTree.nodes.Constant;
 import SyntaxTree.nodes.Node;
 import SyntaxTree.operations.UnaryOperation;
-import SyntaxTree.operators.BinaryOperator;
 import SyntaxTree.operators.Operator;
 import SyntaxTree.operators.UnaryOperator;
 import junit.framework.Assert;

@@ -1,8 +1,10 @@
 package SyntaxTree.testUsingGuice.calculatorsUsingGuiceTest.booleanTest;
 
 import SyntaxTree.dataTypes.Boolean;
+import SyntaxTree.generic.Type;
 import SyntaxTree.modules.OperationModules.BinaryOperationModule;
 import SyntaxTree.nodes.Constant;
+import SyntaxTree.nodes.Node;
 import SyntaxTree.operations.BinaryOperation;
 import SyntaxTree.operators.BinaryOperator;
 import com.google.inject.Guice;
@@ -24,18 +26,26 @@ public class booleanOrTest {
         Constant leftChild = injectorBinaryOperation.getInstance(Constant.class);
         Boolean typeOfRight = injectorBinaryOperation.getInstance(Boolean.class);
         Boolean typeOfLeft = injectorBinaryOperation.getInstance(Boolean.class);
-        putInitializationvalues(typeOfLeft, typeOfRight, rightChild, leftChild, binaryOperator);
+        initializationTypes(typeOfLeft, typeOfRight);
+        initializationNodes(rightChild,leftChild,typeOfLeft,typeOfRight);
+        initializationBinaryOperation(binaryOperator,leftChild, rightChild);
         Assert.assertEquals(true, binaryOperator.evaluate().getValue());
 
     }
 
-    private void putInitializationvalues(Boolean typeOfLeft, Boolean typeOfRight, Constant rightChild, Constant leftChild, BinaryOperation bin) {
-        typeOfLeft.setValue(false);
-        typeOfRight.setValue(true);
-        rightChild.setValue(typeOfRight);
-        leftChild.setValue(typeOfLeft);
+    private void initializationBinaryOperation(BinaryOperation bin, Node leftChild, Node rightChild) {        
         bin.setLeftChild(leftChild);
         bin.setRightChild(rightChild);
         bin.setOperator(BinaryOperator.getOR()); 
+    }
+
+    private void initializationTypes(Boolean typeOfLeft, Boolean typeOfRight) {
+        typeOfLeft.setValue(false);
+        typeOfRight.setValue(true);
+    }
+
+    private void initializationNodes(Constant rightChild, Constant leftChild, Type typeOfRight, Type typeOfLeft) {
+        rightChild.setValue(typeOfRight);
+        leftChild.setValue(typeOfLeft);
     }
 }

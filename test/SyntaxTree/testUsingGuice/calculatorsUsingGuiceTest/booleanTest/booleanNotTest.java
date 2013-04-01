@@ -22,12 +22,12 @@ public class booleanNotTest {
         UnaryOperation unaryOperation = injectorUnaryOperation.getInstance(UnaryOperation.class);
         Constant child = injectorUnaryOperation.getInstance(Constant.class);
         Boolean booleanValue = injectorUnaryOperation.getInstance(Boolean.class);
-        putInitializationvalues(booleanValue, child, unaryOperation);
+        putInitializationValues(booleanValue, child, unaryOperation);
         Assert.assertEquals(false, unaryOperation.evaluate().getValue());
 
     }
 
-    private void putInitializationvalues(Boolean booleanValue, Constant child, UnaryOperation unaryOperation) {
+    private void putInitializationValues(Boolean booleanValue, Constant child, UnaryOperation unaryOperation) {
         booleanValue.setValue(true);
         child.setValue(booleanValue);
         unaryOperation.setChild(child);
