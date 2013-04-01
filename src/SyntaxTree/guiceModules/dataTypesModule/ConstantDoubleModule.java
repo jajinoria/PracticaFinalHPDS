@@ -1,4 +1,4 @@
-package SyntaxTree.modules.dataTypesModules;
+package SyntaxTree.guiceModules.dataTypesModule;
 
 import SyntaxTree.dataTypes.Double;
 import SyntaxTree.generic.Type;

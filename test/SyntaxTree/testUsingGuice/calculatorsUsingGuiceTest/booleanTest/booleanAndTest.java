@@ -2,7 +2,7 @@ package SyntaxTree.testUsingGuice.calculatorsUsingGuiceTest.booleanTest;
 
 import SyntaxTree.dataTypes.Boolean;
 import SyntaxTree.generic.Type;
-import SyntaxTree.modules.OperationModules.BinaryOperationModule;
+import SyntaxTree.guiceModules.OperationModule.BinaryOperationModule;
 import SyntaxTree.nodes.Constant;
 import SyntaxTree.nodes.Node;
 import SyntaxTree.operations.BinaryOperation;
