@@ -4,7 +4,6 @@ import SyntaxTree.dataTypes.Boolean;
 import SyntaxTree.guiceModules.OperationModule.UnaryOperationModule;
 import SyntaxTree.nodes.Constant;
 import SyntaxTree.operations.UnaryOperation;
-import SyntaxTree.operators.BinaryOperator;
 import SyntaxTree.operators.UnaryOperator;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
@@ -31,6 +30,6 @@ public class booleanNotTest {
         booleanValue.setValue(true);
         child.setValue(booleanValue);
         unaryOperation.setChild(child);
-        unaryOperation.setOperator(UnaryOperator.getNOT()); 
+        unaryOperation.setOperator(UnaryOperator.getNOT());
     }
 }

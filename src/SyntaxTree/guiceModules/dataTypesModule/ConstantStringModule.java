@@ -1,13 +1,13 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package SyntaxTree.guiceModules.dataTypesModule;
 
-/**
- *
- * @author Jose
- */
-public class ConstantStringModule {
-    
+import SyntaxTree.dataTypes.String;
+import SyntaxTree.generic.Type;
+import com.google.inject.AbstractModule;
+
+public class ConstantStringModule extends AbstractModule {
+
+    @Override
+    protected void configure() {
+        bind(Type.class).to(String.class);
+    }
 }

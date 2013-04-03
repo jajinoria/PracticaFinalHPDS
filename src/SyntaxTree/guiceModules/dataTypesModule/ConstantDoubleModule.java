@@ -9,6 +9,6 @@ public class ConstantDoubleModule extends AbstractModule {
     @Override
     protected void configure() {
         bind(Type.class).to(Double.class);
-       
+
     }
 }

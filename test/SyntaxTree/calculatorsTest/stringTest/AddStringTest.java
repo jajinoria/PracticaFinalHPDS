@@ -26,17 +26,17 @@ public class AddStringTest {
         Assert.assertEquals("Jose 1", node.evaluate().getValue());
     }
 
-      public void stringDoubleTest() {
+    public void stringDoubleTest() {
         Node node = new BinaryOperation(new Constant(new String("Jose ")), new Constant(new Double(1.0)), BinaryOperator.getADD());
         Assert.assertEquals("Jose1.0", node.evaluate().getValue());
     }
-      
-       public void doubleStringTest() {
+
+    public void doubleStringTest() {
         Node node = new BinaryOperation(new Constant(new Double(1.0)), new Constant(new String(" Jose")), BinaryOperator.getADD());
         Assert.assertEquals("1.0 Jose", node.evaluate().getValue());
     }
-       
-        public void integerStringTest() {
+
+    public void integerStringTest() {
         Node node = new BinaryOperation(new Constant(new Integer(1)), new Constant(new String(" Jose")), BinaryOperator.getADD());
         Assert.assertEquals("1 Jose", node.evaluate().getValue());
     }

@@ -10,7 +10,7 @@ public class UnaryOperationModule extends AbstractModule {
 
     @Override
     protected void configure() {
-        bind(Operator.class).to(UnaryOperator.class);       
+        bind(Operator.class).to(UnaryOperator.class);
         bind(Node.class).to(Constant.class);
     }
 }
