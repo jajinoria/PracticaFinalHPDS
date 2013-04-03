@@ -8,6 +8,7 @@ import SyntaxTree.operators.UnaryOperator;
 import junit.framework.Assert;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
+
 public class NotTest {
 
     public NotTest() {
@@ -20,6 +21,4 @@ public class NotTest {
         Node notNode = new UnaryOperation(mockConstantA, UnaryOperator.getNOT());
         Assert.assertEquals(false, notNode.evaluate().getValue());
     }
-
-  
 }

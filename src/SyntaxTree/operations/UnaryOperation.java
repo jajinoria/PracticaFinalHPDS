@@ -1,8 +1,8 @@
 package SyntaxTree.operations;
 
-import SyntaxTree.nodes.Operation;
 import SyntaxTree.generic.Type;
 import SyntaxTree.nodes.Node;
+import SyntaxTree.nodes.Operation;
 import SyntaxTree.operators.Operator;
 import SyntaxTree.operators.OperatorsToHashMap;
 import java.lang.reflect.InvocationTargetException;
