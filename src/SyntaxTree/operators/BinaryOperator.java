@@ -1,5 +1,7 @@
 package SyntaxTree.operators;
 
+import com.google.inject.Inject;
+
 public class BinaryOperator extends Operator {
 
     private static final BinaryOperator ADD = new BinaryOperator("+", "add");
@@ -33,7 +35,8 @@ public class BinaryOperator extends Operator {
         return OR;
     }
 
-    private BinaryOperator(String symbol, String name) {
+    @Inject
+    public BinaryOperator(String symbol, String name) {
         super(symbol, name);
     }
 }
